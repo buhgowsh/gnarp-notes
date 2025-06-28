@@ -4,7 +4,7 @@ An AI learning assistant to help you study with flash cards!
 
 This project is based off the green, gleeby alien cat, Gnarpy (hence the name Gnarp Notes). Combining silly and serious to help goofballs (like me) lock in when they need to. The style for this project is based off this GIF:
 
-<img src="https://tenor.com/rMgGA3Y3Kqh.gif" width="50" height="50"/>
+![gnarpy-reference-gif](https://github.com/buhgowsh/gnarpy-notes/blob/main/public/good-night-glorp-gleep-glorp.gif)
 
 ## Run on your own machine!
 
