@@ -1,6 +1,6 @@
+
 import type { Metadata } from "next";
 import { Chakra_Petch } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const chakraPetch = Chakra_Petch({
@@ -23,10 +23,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${chakraPetch.variable} bg-slate-900 font-chakra`}>
         {children}
-        
-        {/* Load libraries from CDN for reliability */}
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" strategy="beforeInteractive" />
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/pptxgenjs/3.12.0/pptxgen.min.js" strategy="beforeInteractive" />
       </body>
     </html>
   );

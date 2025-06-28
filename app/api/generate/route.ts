@@ -4,7 +4,7 @@ import type { Flashcard } from '@/lib/types';
 
 export async function POST(request: Request) {
   if (!process.env.GEMINI_API_KEY) {
-    return NextResponse.json({ error: "GEMINI_API_KEY environment variable not set" }, { status: 500 });
+    return NextResponse.json({ error: "API_KEY environment variable not set" }, { status: 500 });
   }
 
   const { text } = await request.json();

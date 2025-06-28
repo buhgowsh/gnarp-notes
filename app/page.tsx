@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useCallback } from 'react';
@@ -81,14 +82,14 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] p-4 flex items-center justify-center text-white">
+    <div className="min-h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] p-2 sm:p-4 flex items-center justify-center text-white">
       <div className="relative w-full h-full max-w-7xl mx-auto flex items-center justify-center">
         <div className="absolute inset-0 glitter-border rounded-2xl opacity-50"></div>
-        <div className="relative w-full h-full min-h-[80vh] bg-black/30 backdrop-blur-xl rounded-2xl p-4 md:p-8 flex flex-col items-center justify-center">
+        <div className="relative w-full h-full min-h-[90vh] sm:min-h-[80vh] bg-black/30 backdrop-blur-xl rounded-2xl p-4 md:p-8 flex flex-col items-center justify-center">
           <Sparkles count={20} />
-          <div className="absolute top-4 left-6 flex items-center gap-3">
-              <Gnarpy className="w-10 h-10 text-green-400"/>
-              <h1 className="text-2xl font-bold text-white tracking-widest">GNARP NOTES</h1>
+          <div className="absolute top-4 left-4 sm:left-6 flex items-center gap-2 sm:gap-3">
+              <Gnarpy className="w-8 h-8 sm:w-10 sm:h-10 text-green-400"/>
+              <h1 className="text-xl sm:text-2xl font-bold text-white tracking-widest">GNARP NOTES</h1>
           </div>
           <main className="w-full flex-grow flex items-center justify-center z-10">
             {renderContent()}

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Flashcard } from '@/lib/types';
 import { createPowerPoint } from '@/lib/pptx';
@@ -33,16 +34,16 @@ const FlashcardViewer: React.FC<FlashcardViewerProps> = ({ cards, fileName, onRe
   const currentCard = cards[currentIndex];
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4 flex flex-col items-center">
-      <p className="text-center text-purple-300 mb-4">Generated {cards.length} cards! Click to flip.</p>
+    <div className="w-full max-w-4xl mx-auto p-2 sm:p-4 flex flex-col items-center">
+      <p className="text-center text-purple-300 mb-2 sm:mb-4 text-sm sm:text-base">Generated {cards.length} cards! Click to flip.</p>
       
-      <div className="relative w-full max-w-3xl h-80 mb-4 flex justify-center items-center">
+      <div className="relative w-full max-w-3xl h-64 sm:h-80 mb-4 flex justify-center items-center">
         <button
           onClick={handlePrev}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-purple-600/40 text-white rounded-full p-2 hover:bg-purple-700 transition-all duration-200 transform hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="absolute left-0 sm:-left-4 top-1/2 -translate-y-1/2 z-20 bg-purple-600/40 text-white rounded-full p-1 sm:p-2 hover:bg-purple-700 transition-all duration-200 transform hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Previous card"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
@@ -53,34 +54,34 @@ const FlashcardViewer: React.FC<FlashcardViewerProps> = ({ cards, fileName, onRe
             onClick={() => setIsFlipped(!isFlipped)}
           >
             {/* Front */}
-            <div className="card-face rounded-xl bg-slate-800/50 border-2 border-cyan-400 backdrop-blur-sm p-6 flex flex-col justify-center items-center shadow-2xl shadow-cyan-500/20">
+            <div className="card-face rounded-xl bg-slate-800/50 border-2 border-cyan-400 backdrop-blur-sm p-4 sm:p-6 flex flex-col justify-center items-center shadow-2xl shadow-cyan-500/20">
               <p className="text-sm text-cyan-300 mb-2">Question</p>
-              <p className="text-white text-xl text-center font-semibold">{currentCard.question}</p>
+              <p className="text-white text-lg sm:text-xl text-center font-semibold">{currentCard.question}</p>
             </div>
             {/* Back */}
-            <div className="card-face card-face--back rounded-xl bg-slate-800/50 border-2 border-green-400 backdrop-blur-sm p-6 flex flex-col justify-center items-center shadow-2xl shadow-green-500/20">
+            <div className="card-face card-face--back rounded-xl bg-slate-800/50 border-2 border-green-400 backdrop-blur-sm p-4 sm:p-6 flex flex-col justify-center items-center shadow-2xl shadow-green-500/20">
               <p className="text-sm text-green-300 mb-2">Answer</p>
-              <p className="text-white text-lg text-center">{currentCard.answer}</p>
+              <p className="text-white text-base sm:text-lg text-center">{currentCard.answer}</p>
             </div>
           </div>
         </div>
 
         <button
           onClick={handleNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-purple-600/40 text-white rounded-full p-2 hover:bg-purple-700 transition-all duration-200 transform hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="absolute right-0 sm:-right-4 top-1/2 -translate-y-1/2 z-20 bg-purple-600/40 text-white rounded-full p-1 sm:p-2 hover:bg-purple-700 transition-all duration-200 transform hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Next card"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>
 
-      <p className="text-white my-2">{currentIndex + 1} / {cards.length}</p>
+      <p className="text-white my-2 text-sm sm:text-base">{currentIndex + 1} / {cards.length}</p>
 
-      <div className="flex items-center gap-4 mt-4">
-        <button onClick={handleDownload} className="px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">Download PPTX</button>
-        <button onClick={onReset} className="px-6 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">Start Over</button>
+      <div className="flex items-center gap-2 sm:gap-4 mt-2 sm:mt-4">
+        <button onClick={handleDownload} className="px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">Download PPTX</button>
+        <button onClick={onReset} className="px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">Start Over</button>
       </div>
     </div>
   );
