@@ -1,4 +1,4 @@
-# Gnarp Notes
+# ✨ Gnarp Notes ✨
 
 An AI learning assistant to help you study with flash cards!
 
@@ -6,7 +6,7 @@ This project is based off the green, gleeby alien cat, Gnarpy (hence the name Gn
 
 ![gnarpy-reference-gif](https://github.com/buhgowsh/gnarpy-notes/blob/main/public/good-night-glorp-gleep-glorp.gif)
 
-## Run on your own machine!
+## 💻Run on your own machine!
 
 **Prerequisites:**  Node.js
 
