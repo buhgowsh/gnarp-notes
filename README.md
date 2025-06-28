@@ -1,14 +1,20 @@
-# Run and deploy your AI Studio app
+# Gnarp Notes
 
-This contains everything you need to run your app locally.
+An AI learning assistant to help you study with flash cards!
 
-## Run Locally
+This project is based off the green, gleeby alien cat, Gnarpy (hence the name Gnarp Notes). Combining silly and serious to help goofballs (like me) lock in when they need to. The style for this project is based off this GIF:
+ 
+<img src="https://tenor.com/view/good-night-glorp-gleep-glorp-binx-good-night-good-night-good-night-cat-gif-14783922768766201983"/>
+
+## Run on your own machine!
 
 **Prerequisites:**  Node.js
 
+On Linux or WSL, you can download Node.js with `sudo apt-get install nodejs`
 
-1. Install dependencies:
+1. Clone repo: `git clone <URL either though HTTPS or SSH>`
+2. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+3. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+4. Run the app:
    `npm run dev`
