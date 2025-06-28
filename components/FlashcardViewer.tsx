@@ -81,7 +81,7 @@ const FlashcardViewer: React.FC<FlashcardViewerProps> = ({ cards, fileName, onRe
 
       <div className="flex items-center gap-2 sm:gap-4 mt-2 sm:mt-4">
         <button onClick={handleDownload} className="px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">Download PPTX</button>
-        <button onClick={onReset} className="px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">Start Over</button>
+        <button onClick={onReset} className="px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors">Make Another</button>
       </div>
     </div>
   );
