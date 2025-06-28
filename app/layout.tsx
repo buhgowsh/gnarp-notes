@@ -24,9 +24,9 @@ export default function RootLayout({
       <body className={`${chakraPetch.variable} bg-slate-900 font-chakra`}>
         {children}
         
-        {/* Load libraries locally to avoid CDN blockers */}
-        <Script src="/vendor/pdf.min.js" strategy="beforeInteractive" />
-        <Script src="/vendor/pptxgen.min.js" strategy="beforeInteractive" />
+        {/* Load libraries from CDN for reliability */}
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" strategy="beforeInteractive" />
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/pptxgenjs/3.12.0/pptxgen.min.js" strategy="beforeInteractive" />
       </body>
     </html>
   );

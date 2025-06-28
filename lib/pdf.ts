@@ -7,14 +7,36 @@ declare global {
   }
 }
 
+/**
+ * Waits for the pdf.js library to be available on the window object.
+ * @param timeout The maximum time to wait in milliseconds.
+ * @returns A promise that resolves when the library is loaded.
+ */
+const ensurePdfJsIsLoaded = (timeout = 5000): Promise<void> => {
+  return new Promise((resolve, reject) => {
+    if (window.pdfjsLib) {
+      return resolve();
+    }
+
+    const startTime = Date.now();
+    const interval = setInterval(() => {
+      if (window.pdfjsLib) {
+        clearInterval(interval);
+        resolve();
+      } else if (Date.now() - startTime > timeout) {
+        clearInterval(interval);
+        reject(new Error("pdf.js library failed to load within the timeout period. Check the Script tag in layout.tsx."));
+      }
+    }, 100);
+  });
+};
+
 export const extractTextFromPdf = async (file: File): Promise<string> => {
+  await ensurePdfJsIsLoaded();
   const pdfjsLib = window.pdfjsLib;
-  if (!pdfjsLib) {
-    throw new Error("pdf.js library not loaded. Check the Script tag in layout.tsx.");
-  }
   
-  // Configure the worker from the local vendor path
-  pdfjsLib.GlobalWorkerOptions.workerSrc = '/vendor/pdf.worker.min.js';
+  // Configure the worker to use the CDN version
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
   const arrayBuffer = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument(arrayBuffer).promise;

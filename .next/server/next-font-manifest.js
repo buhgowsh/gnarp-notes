@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/buhgowsh/hackathons/gnarpynotes/gnarpynotes/app/layout\":[\"static/media/e6fd32ec5acdd27d-s.p.woff2\",\"static/media/6681946d7a6ccbb7-s.p.woff2\",\"static/media/84f090e3b62fb9e3-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

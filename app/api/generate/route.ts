@@ -3,8 +3,8 @@ import { NextResponse } from 'next/server';
 import type { Flashcard } from '@/lib/types';
 
 export async function POST(request: Request) {
-  if (!process.env.API_KEY) {
-    return NextResponse.json({ error: "API_KEY environment variable not set" }, { status: 500 });
+  if (!process.env.GEMINI_API_KEY) {
+    return NextResponse.json({ error: "GEMINI_API_KEY environment variable not set" }, { status: 500 });
   }
 
   const { text } = await request.json();
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "No text provided for processing" }, { status: 400 });
   }
 
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
   const prompt = `
     You are an expert study assistant called Gnarpy. Your purpose is to analyze text and create high-quality flashcards.
