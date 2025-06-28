@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glitter-border {
+  background-image: url('/glitter.jpeg');
+  background-repeat: repeat;
+}
+
+.card {
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.card-face--back {
+  transform: rotateY(180deg);
+}
+
+.text-glow {
+  text-shadow: 0 0 8px rgba(102, 252, 241, 0.8), 0 0 10px rgba(102, 252, 241, 0.6);
+}
