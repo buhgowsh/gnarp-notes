@@ -16,7 +16,7 @@ const Gnarpy: React.FC<GnarpyProps> = ({ className }) => (
       <path d="M49 7.5c-20 0-36.3 16.3-36.3 36.3S29 80 49 80s36.3-16.3 36.3-36.3S69 7.5 49 7.5zm0 68.5c-17.8 0-32.3-14.5-32.3-32.3S31.2 11.5 49 11.5s32.3 14.5 32.3 32.3-14.4 32.2-32.3 32.2z" fill="#15803d"/>
       <ellipse transform="rotate(-15 30 38)" cx="30" cy="38" rx="10" ry="14" fill="#000" />
       <ellipse transform="rotate(15 68 38)" cx="68" cy="38" rx="10" ry="14" fill="#000" />
-      <path d="M49 55c-3.9 0-7.3 2-9.2 5.1-.6 1-1.9 1.3-2.9.7s-1.3-1.9-.7-2.9C38.6 53.6 43.5 51 49 51s10.4 2.6 12.8 6.9c.6 1 0 2.3-1 2.9s-2.3 0-2.9-1C56.3 57 52.9 55 49 55z" fill="#14532d"/>
+      <path d="M42 58 C 44 62, 47 62, 49 58 C 51 62, 54 62, 56 58" stroke="#14532d" strokeWidth="1.5" fill="none" strokeLinecap="round" />
       <path d="M37 13c-1.1 0-2-.9-2-2V2c0-1.1.9-2 2-2s2 .9 2 2v9c0 1.1-.9 2-2 2z" fill="#16a34a" stroke="#14532d" strokeWidth="1" />
       <path d="M61 13c-1.1 0-2-.9-2-2V2c0-1.1.9-2 2-2s2 .9 2 2v9c0 1.1-.9 2-2 2z" fill="#16a34a" stroke="#14532d" strokeWidth="1" />
 
